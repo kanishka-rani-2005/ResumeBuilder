@@ -5,6 +5,7 @@
     "files": [
       ".gitignore",
       "server/server.js",
+      ".git/COMMIT_EDITMSG",
       "client/.env",
       "server/.env"
     ],
