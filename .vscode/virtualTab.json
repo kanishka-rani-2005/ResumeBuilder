@@ -5,7 +5,8 @@
     "files": [
       ".gitignore",
       "server/server.js",
-      "client/.env"
+      "client/.env",
+      "server/.env"
     ],
     "builtIn": true,
     "bookmarks": {}
