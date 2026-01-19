@@ -3,7 +3,9 @@
     "id": "builtin_group_id",
     "name": "Currently Open Files",
     "files": [
-      ".gitignore"
+      ".gitignore",
+      "server/server.js",
+      "client/.env"
     ],
     "builtIn": true,
     "bookmarks": {}
