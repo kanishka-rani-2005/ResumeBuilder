@@ -2,13 +2,7 @@
   {
     "id": "builtin_group_id",
     "name": "Currently Open Files",
-    "files": [
-      ".gitignore",
-      "server/server.js",
-      ".git/COMMIT_EDITMSG",
-      "client/.env",
-      "server/.env"
-    ],
+    "files": [],
     "builtIn": true,
     "bookmarks": {}
   }
