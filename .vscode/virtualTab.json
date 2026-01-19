@@ -1,0 +1,11 @@
+[
+  {
+    "id": "builtin_group_id",
+    "name": "Currently Open Files",
+    "files": [
+      ".gitignore"
+    ],
+    "builtIn": true,
+    "bookmarks": {}
+  }
+]
