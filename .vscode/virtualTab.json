@@ -4,6 +4,7 @@
     "name": "Currently Open Files",
     "files": [
       "README.md",
+      "README.md",
       "client/src/components/home/Banner.jsx"
     ],
     "builtIn": true,
