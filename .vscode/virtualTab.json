@@ -3,9 +3,8 @@
     "id": "builtin_group_id",
     "name": "Currently Open Files",
     "files": [
-      "server/.env",
-      "server/configs/ai.js",
-      "server/controllers/aiController.js"
+      "README.md",
+      "client/src/components/home/Banner.jsx"
     ],
     "builtIn": true,
     "bookmarks": {}

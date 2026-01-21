@@ -10,7 +10,7 @@ const Banner = () => {
     setLoading(true)
 
     setTimeout(() => {
-      window.location.href = "/app?state=register"
+      window.location.href = "/"
     }, 800) 
   }
 
