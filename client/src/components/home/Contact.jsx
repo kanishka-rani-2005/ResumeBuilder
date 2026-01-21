@@ -17,10 +17,10 @@ const Contact = () => {
           Have questions about resumes, ATS optimization, or AI features?  
           Reach us directly at{" "}
           <a
-            href="mailto:support@airesumebuilder.com"
+            href="mailto:kanishka22043@gmail.com"
             className="font-medium hover:underline"
           >
-            support@airesumebuilder.com
+            kanishka22043@gmail.com
           </a>
         </p>
 
@@ -37,10 +37,10 @@ const Contact = () => {
               Get help with resume building & AI features.
             </p>
             <a
-              href="mailto:support@airesumebuilder.com"
+              href="mailto:kanishka22043@gmail.com"
               className="font-semibold"
             >
-              support@airesumebuilder.com
+              kanishka22043@gmail.com
             </a>
           </div>
 
@@ -70,7 +70,7 @@ const Contact = () => {
               Career guidance during working hours.
             </p>
             <span className="font-semibold">
-              +1 (234) 567-8901
+              +91 78884-22043
             </span>
           </div>
 

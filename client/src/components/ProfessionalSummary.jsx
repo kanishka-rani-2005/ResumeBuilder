@@ -7,25 +7,32 @@ const ProfessionalSummary = ({ data, onChange, setResumeData }) => {
   const {token}=useSelector(state=>state.auth)
   const [isGenerating ,setIsGenerating]=useState(false);
 
-  const generateSummary=async()=>{
-      try{
-          setIsGenerating(true)
-          const prompt=`Enhance my Professional Summary "${data}"`;
+const generateSummary = async () => {
+  try {
+    setIsGenerating(true)
 
-          const {response}=await api.post(`/api/ai/enhance-pro-sum`,{userContent:prompt},{headers:{
-          Authorization: `Bearer ${token}`
-          }})
-          setResumeData(prev=>({...prev,professional_summary:response.data.enhancedContent}))
-      
-          toast.success(data.message)
-    }catch(error){
-      console.log(error.message)
-      toast.error(error.message||"Not Saved")
-    }
-    finally{
-      setIsGenerating(false)
-    }
+    const summaryText = `Enhance my Professional Summary "${data}"`
+
+    const { data: resData } = await api.post(
+      `/api/ai/enhance-pro-sum`,
+      { userContent: summaryText },
+      { headers: { Authorization: `Bearer ${token}` } }
+    )
+
+    setResumeData(prev => ({
+      ...prev,
+      professional_summary: resData.enhancedContent
+    }))
+
+    toast.success("Summary enhanced successfully")
+  } catch (error) {
+    console.log(error)
+    toast.error(error?.response?.data?.message || "Not Saved")
+  } finally {
+    setIsGenerating(false)
   }
+}
+
   return (
     <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm space-y-6">
       

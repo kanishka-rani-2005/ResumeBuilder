@@ -2,7 +2,11 @@
   {
     "id": "builtin_group_id",
     "name": "Currently Open Files",
-    "files": [],
+    "files": [
+      "server/.env",
+      "server/configs/ai.js",
+      "server/controllers/aiController.js"
+    ],
     "builtIn": true,
     "bookmarks": {}
   }

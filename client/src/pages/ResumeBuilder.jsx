@@ -103,7 +103,7 @@ const ResumeBuilder = () => {
     catch(error){
       console.log(error.message)
     }
-  }
+}
 
 const handleShare = async () => {
   const baseUrl = window.location.origin;
@@ -128,11 +128,11 @@ const handleShare = async () => {
 };
 
 
-  const downloadResume = () => {
+const downloadResume = () => {
     window.print();
-  }
+}
 
-  const saveResume=async ()=>{
+const saveResume=async ()=>{
     try{
       let updatedResumeData=structuredClone(resumeData)
       ///remove image to send it seprately
@@ -157,7 +157,7 @@ const handleShare = async () => {
       console.log(error.message)
       toast.error(error.message||"Not Saved")
     }
-  }
+}
 
 
 
@@ -384,7 +384,6 @@ const handleShare = async () => {
                 </div>
               </div>
 
-              {/* Preview Card */}
               <div className="bg-white rounded-2xl shadow-lg p-4 flex justify-center">
                 <div className="w-full">
                   <ResumePreview

@@ -11,10 +11,11 @@ const app=express();
 const PORT = process.env.PORT || 10000;
 
 await connectDB();
-const cors = require('cors');
-app.use(cors({
-  origin: "https://resume-builder-nine-umber.vercel.app"
-}));
+// const cors = require('cors');
+// app.use(cors({
+//   origin: "https://resume-builder-nine-umber.vercel.app"
+// }));
+app.use(cors())
 app.use(express.json({ limit: '10mb' })); 
 
 

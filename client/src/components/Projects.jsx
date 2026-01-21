@@ -24,7 +24,6 @@ const Projects = ({data,onChange}) => {
   };
   return (
     <div className="space-y-6">
-      {/* Header */}
       <div className="flex items-start justify-between gap-6">
         <div>
           <h3 className="text-xl font-semibold text-gray-900">Projects</h3>
@@ -44,7 +43,6 @@ const Projects = ({data,onChange}) => {
         </button>
       </div>
 
-      {/* Empty State */}
       {data.length === 0 && (
         <div className="text-center py-10 border border-dashed rounded-xl bg-white">
           <Projector className="size-12 mx-auto text-gray-400" />
@@ -62,7 +60,6 @@ const Projects = ({data,onChange}) => {
               key={index}
               className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm space-y-5"
             >
-              {/* Card Header */}
               <div className="flex justify-between items-center">
                 <h4 className="font-semibold text-gray-800">
                   Project #{index + 1}

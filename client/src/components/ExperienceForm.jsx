@@ -23,25 +23,29 @@ const ExperienceForm = ({ data = [], onChange }) => {
   };
 
   
-    const generateDescription=async (index)=>{
-      setGeneratingIndex(index)
-      const experience=data[index]
-      const prompt=`Enhance this job description ${experience.description} for the position of ${experience.position} at ${experience.company}.`
+const generateDescription = async (index) => {
+  setGeneratingIndex(index)
+  const experience = data[index]
 
-        try{
-            const {data}=await api.post(`/api/ai/enhance-job-desc`,{userContent:prompt},{headers:{
-            Authorization: `Bearer ${token}`
-            }})
-            updateExperience(index,'description',data.enhancedContent)
-            toast.success(data.message)
-      }catch(error){
-        console.log(error.message)
-        toast.error(error.message||"Not Saved")
-      }
-      finally{
-        setGeneratingIndex(-1)
-      }
-    }
+  const prompt = `Enhance this job description ${experience.description} for the position of ${experience.position} at ${experience.company}.`
+
+  try {
+    const { data: resData } = await api.post(
+      `/api/ai/enhance-job-desc`,
+      { userContent: prompt },
+      { headers: { Authorization: `Bearer ${token}` } }
+    )
+
+    updateExperience(index, "description", resData.enhancedContent)
+    toast.success("Description enhanced successfully")
+  } catch (error) {
+    console.log(error)
+    toast.error(error?.response?.data?.message || "Not Saved")
+  } finally {
+    setGeneratingIndex(-1)
+  }
+}
+
 
   const removeExperience = (index) => {
     const updated = data.filter((_, i) => i !== index);

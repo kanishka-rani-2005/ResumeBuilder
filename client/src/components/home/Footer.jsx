@@ -54,16 +54,16 @@ const Footer = () => {
             </p>
 
             <div className="flex items-center gap-4 mt-2">
-              <a href="https://instagram.com/prebuiltui" target="_blank" rel="noreferrer">
+              <a href="https://www.instagram.com/kanishkabansal61/" target="_blank" rel="noreferrer">
                 <Instagram className="w-5 h-5 text-gray-500 hover:text-violet-600 transition" />
               </a>
-              <a href="https://www.linkedin.com/company/prebuiltui" target="_blank" rel="noreferrer">
+              <a href="https://www.linkedin.com/in/kanishka-rani-45ab4b353/" target="_blank" rel="noreferrer">
                 <Linkedin className="w-5 h-5 text-gray-500 hover:text-violet-600 transition" />
               </a>
-              <a href="https://x.com/prebuiltui" target="_blank" rel="noreferrer">
+              <a href="" target="_blank" rel="noreferrer">
                 <Twitter className="w-5 h-5 text-gray-500 hover:text-violet-600 transition" />
               </a>
-              <a href="https://www.youtube.com/@prebuiltui" target="_blank" rel="noreferrer">
+              <a href="https://www.youtube.com/" target="_blank" rel="noreferrer">
                 <Youtube className="w-6 h-6 text-gray-500 hover:text-violet-600 transition" />
               </a>
             </div>

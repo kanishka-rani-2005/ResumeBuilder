@@ -13,6 +13,10 @@ import toast from "react-hot-toast";
 import api from "../configs/api";
 
 import { pdfToText } from "react-pdftotext";
+import * as pdfjsLib from "pdfjs-dist";
+import pdfWorker from "pdfjs-dist/build/pdf.worker?url";
+
+pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorker;
 
 const Dashboard = () => {
   const { user, token } = useSelector((state) => state.auth);
@@ -47,7 +51,24 @@ const Dashboard = () => {
     }
   };
 
-  // ---------------- UPLOAD ----------------
+  const pdfToText = async (file) => {
+  const arrayBuffer = await file.arrayBuffer();
+
+  const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+
+  let text = "";
+
+  for (let i = 1; i <= pdf.numPages; i++) {
+    const page = await pdf.getPage(i);
+    const content = await page.getTextContent();
+
+    const pageText = content.items.map(item => item.str).join(" ");
+    text += pageText + "\n";
+  }
+
+  return text;
+};
+
   const uploadResume = async (event) => {
     event.preventDefault();
     setIsLoading(true);

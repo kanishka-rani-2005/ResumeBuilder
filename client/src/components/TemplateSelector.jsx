@@ -29,7 +29,6 @@ const TemplateSelector = ({ selectedTemplate, onChange }) => {
 
   return (
     <div className="relative">
-      {/* Trigger Button */}
       <button
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}
@@ -39,7 +38,6 @@ const TemplateSelector = ({ selectedTemplate, onChange }) => {
         <span className="max-sm:hidden">Template</span>
       </button>
 
-      {/* Dropdown */}
       {isOpen && (
         <div className="absolute z-20 mt-2 w-64 rounded-xl border border-gray-200 bg-white shadow-lg overflow-hidden">
           {templates.map((temp) => {
@@ -83,7 +81,6 @@ const TemplateSelector = ({ selectedTemplate, onChange }) => {
         </div>
       )}
 
-      {/* {} */}
     </div>
   );
 };
