@@ -38,7 +38,7 @@ Check out the deployed application here:
 
 ### 1. Clone the repo
 ```bash
-git clone [https://github.com/yourusername/resume-builder.git](https://github.com/yourusername/resume-builder.git)
+git clone 
 cd resume-builder
 
 ```
