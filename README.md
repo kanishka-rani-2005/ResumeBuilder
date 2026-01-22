@@ -6,7 +6,7 @@ An intelligent, full-stack platform that transforms the way job seekers create r
 
 ## 🌐 Live Demo
 Check out the deployed application here: 
-**[Resume Builder Live](https://resume-builder-5vq4sh1m5-krani-be23-9326s-projects.vercel.app/)**
+**[Resume Builder Live](https://resume-builder-nine-umber.vercel.app?_vercel_share=uJDHezBd5zEMjSqWP2zW2hwhmzdjK739)**
 
 ---
 
